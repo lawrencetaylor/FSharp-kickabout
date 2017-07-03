@@ -3,6 +3,12 @@
 
 open Expecto
 
+[<Tests>]
+let exampleTest = 
+  testCase "Sample" <| fun _ -> Expect.isFalse true "Should have been false"
 
+let tests = 
+  [ exampleTest ]
+  |> testList "Tests"
 
-runTestsInAssembly defaultConfig [||]
+runTests defaultConfig tests
